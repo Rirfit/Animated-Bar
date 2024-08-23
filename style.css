@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html, body{
+    background-color: #6665ee;
+    display: grid;
+    height: 100%;
+    place-items: center;
+}
+
+.skills-bar{
+    width: 600px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+
+.skills-bar .bar{
+    margin: 20px 0;
+}
+
+.skills-bar .bar:first-child{
+    margin-top: 0px;
+}
+.skills-bar .bar .info{
+    margin-bottom: 5px;
+}
+
+.skills-bar .bar .info span{
+   font-size: 17px;
+   font-weight: 500;
+}
+.skills-bar .bar  .progress-line{
+        position: relative;
+        height: 10px;
+        width: 100%;
+        background: #f0f0f0;
+        border-radius: 10px;
+        transform: scaleX(0);
+        transform-origin: left;
+        box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05),
+                        0px 1px rgba(255,255,255,0.8);
+        animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+
+}
+.bar  .progress-line span{
+    height: 100%;
+    width: 80%;
+    background: #6665ee;
+    position: absolute;
+    border-radius: 10px;
+}
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+
+    }
+    
+}
+.bar  .progress-line span::before{
+    position: absolute;
+    content: "";
+    height: 0;
+    right: 0;
+    top: -10px;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-top-color:#000 ;
+}
+
+.bar  .progress-line span::after{
+    position: absolute;
+    content: "80%";
+    right: 0;
+    top: -28px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    background: #000;
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+
+.bar  .progress-line.um span::after{
+    content: "90%";
+}
+.bar  .progress-line.dois span::after{
+    content: "80%";
+
+}
+.bar  .progress-line.tres span::after{
+    content: "75%";
+
+}
+.bar  .progress-line.quatro span::after{
+    content: "79%";
+
+}
+.bar  .progress-line.cinco span::after{
+    content: "93%";
+
+}
+
+.bar  .progress-line.um span{
+    width: 90%;
+
+}
+.bar  .progress-line.dois span{
+    width: 80%;
+
+}
+.bar  .progress-line.tres span{
+    width: 75%;
+
+}
+.bar  .progress-line.quatro span{
+    width: 79%;
+
+}
+.bar  .progress-line.cinco span{
+    width: 93%;
+
+}
